@@ -37,11 +37,13 @@ function startVideo() {
 
 Promise.all([
     faceapi.nets.tinyFaceDetector.loadFromUri('./models')
+  //, faceapi.nets.ssdMobilenetv1.loadFromUri('./models')
   , faceapi.nets.faceLandmark68Net.loadFromUri('./models')
   , faceapi.nets.faceRecognitionNet.loadFromUri('./models')
   , faceapi.nets.faceExpressionNet.loadFromUri('./models')
   , faceapi.nets.ageGenderNet.loadFromUri('./models')
-]).then(prepFaces)
+])
+.then(prepFaces)
 .then(startVideo)
 
 video.addEventListener('play', () => {
@@ -70,7 +72,6 @@ video.addEventListener('play', () => {
       const options = { label }
       const drawBox = new faceapi.draw.DrawBox(detection.box, options)
       drawBox.draw(canvas)
-      console.log(Math.round(age) + ' ' + gender)
     })
   }, 100)
 })
