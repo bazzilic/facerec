@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>FaceRec</title>
   <script defer src="face-api.min.js"></script>
   <script defer src="script.js"></script>
   <style>
@@ -20,10 +20,12 @@
 
     canvas {
       position: absolute;
+      border: 1px solid red;
     }
   </style>
 </head>
 <body>
-  <video id="video" width="720" height="560" autoplay muted></video>
+  <!--div id="error">&nbsp;</div-->
+  <video id="video" autoplay loop muted playsinline></video>
 </body>
 </html>
