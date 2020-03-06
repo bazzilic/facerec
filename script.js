@@ -1,7 +1,7 @@
 var labeledFaceDescriptors
 
 async function prepFaces() {
-  const labels = ['Vasily', 'Palina', 'Alexey', 'Antoine', 'Dmitry', 'Maria', 'Petr', 'Vladimir']
+  const labels = ['Vasily', 'Palina', 'Alexey', 'Antoine', 'Dmitry', 'Maria', 'Petr', 'Vladimir', 'Nadejda', 'Sergey']
   labeledFaceDescriptors = await Promise.all(
     labels.map(async label => {
       // fetch image data from urls and convert blob to HTMLImage element
